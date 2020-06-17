@@ -26,7 +26,7 @@ const SignupForm = props => {
       }, [formData]);  
       const submit = () => {
         schema.validate(formData).then( () => {
-          axios.post("https://reqres.in/api/users", formData).then( (res) => {
+          axios.post("https://co-make-9cf46.web.app/api/register", formData).then( (res) => {
           console.log(res.data)
          })
         })
