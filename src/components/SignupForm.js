@@ -48,7 +48,7 @@ const SignupForm = props => {
                     event.preventDefault();
                    submit();
                     setFormData({
-                         // name: "",
+                    name: "",
         email: "",
         password: "",
         zip: ""})
