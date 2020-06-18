@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import {Button, Navbar, Card, CardImg} from 'reactstrap';
+import {Button, Navbar, Card} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import SignupForm from './components/SignupForm'
 import Login from './components/Login'

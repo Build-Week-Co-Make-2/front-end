@@ -3,7 +3,7 @@ import { Card, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
 import * as yup from 'yup';
 
-const SignupForm = props => {
+const SignupForm = () => {
     const [buttonDisabled, setButtonDisabled] = useState(true);
     const [formData, setFormData] = useState({
         // name: "",
