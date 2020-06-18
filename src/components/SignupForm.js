@@ -6,13 +6,13 @@ import * as yup from 'yup';
 const SignupForm = props => {
     const [buttonDisabled, setButtonDisabled] = useState(true);
     const [formData, setFormData] = useState({
-        name: "",
+        // name: "",
         email: "",
         password: "",
         zip: ""
     })
     const schema = yup.object().shape({
-        name: yup.string().required("Name is required").min(2),
+        // name: yup.string().required("Name is required").min(2),
         email: yup.string().required("email is required"),
         zip: yup.string().required("Must enter a valid zip").min(5),
         password: yup.string().required("Please enter a password").min(6)
@@ -48,16 +48,16 @@ const SignupForm = props => {
                     event.preventDefault();
                    submit();
                     setFormData({
-                    name: "",
+                    // name: "",
         email: "",
         password: "",
         zip: ""})
     
     }} style={{margin: "5%"}}>
-        <FormGroup>
+        {/* <FormGroup>
             <Label for="name">Name</Label>
             <Input name="name"id="name" placeholder="name" value={formData.name} onChange={handleChanges}/>
-        </FormGroup> 
+        </FormGroup>  */}
         <FormGroup>
             <Label for="email">email</Label>
             <Input type="email" name="email" placeholder="email" value={formData.email} onChange={handleChanges}/>
