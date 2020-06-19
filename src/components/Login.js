@@ -4,7 +4,7 @@ import { Card, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
 import * as yup from 'yup';
 
-const SignupForm = (props) => {
+const LoginForm = (props) => {
 	const [buttonDisabled, setButtonDisabled] = useState(true);
 	const [formData, setFormData] = useState({
 		email: '',
@@ -47,9 +47,7 @@ const SignupForm = (props) => {
 
 	return (
 		<>
-			<Card className="navbar">
-				<h2 style={{ color: 'white', margin: '0 auto' }}>Please Login</h2>
-			</Card>
+			
 			<div className="iform">
 			<Form
 				onSubmit={(event) => {
@@ -62,6 +60,7 @@ const SignupForm = (props) => {
 				}}
 				style={{ margin: '5%' }}
 			>
+				<h2>Please Login</h2>
 				<FormGroup>
 					<Label for="email">Email</Label>
 					<Input
@@ -90,4 +89,4 @@ const SignupForm = (props) => {
 	);
 };
 
-export default SignupForm;
+export default LoginForm;

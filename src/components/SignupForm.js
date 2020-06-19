@@ -40,14 +40,9 @@ const SignupForm = () => {
 
 	return (
 		<>
-			<Card className="navbar">
+			
 
-				<h2 style={{ color: 'white', margin: '0 auto' }}>
-					Please sign up for access
-				</h2>
-			</Card>
-
-			<div className="iform">
+			<div className="sform">
 			<Form
 				onSubmit={(event) => {
 					event.preventDefault();
@@ -61,6 +56,9 @@ const SignupForm = () => {
 				}}
 				style={{ margin: '5%' }}
 			>
+				<h2>
+					Please sign up for access
+				</h2>
 				<FormGroup>
 					<Label for="name">Name</Label>
 					<Input
