@@ -50,6 +50,7 @@ const SignupForm = (props) => {
 			<Card className="navbar">
 				<h2 style={{ color: 'white', margin: '0 auto' }}>Please Login</h2>
 			</Card>
+			<div className="iform">
 			<Form
 				onSubmit={(event) => {
 					event.preventDefault();
@@ -84,6 +85,7 @@ const SignupForm = (props) => {
 					Login
 				</Button>
 			</Form>
+			</div>
 		</>
 	);
 };
