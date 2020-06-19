@@ -41,10 +41,13 @@ const SignupForm = () => {
 	return (
 		<>
 			<Card className="navbar">
+
 				<h2 style={{ color: 'white', margin: '0 auto' }}>
 					Please sign up for access
 				</h2>
 			</Card>
+
+			<div className="iform">
 			<Form
 				onSubmit={(event) => {
 					event.preventDefault();
@@ -100,6 +103,7 @@ const SignupForm = () => {
 					Sign Up!
 				</Button>
 			</Form>
+			</div>
 		</>
 	);
 };
