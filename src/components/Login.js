@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axiosWithAuth from '../utils/axiosWithAuth'
 import { Card, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axios from 'axios';
 import * as yup from 'yup';
@@ -34,7 +35,7 @@ const SignupForm = () => {
       const handleChanges = event => {
         event.persist();
           setFormData({ ...formData, [event.target.name]: event.target.value });
-          console.log(event)
+          // console.log(event)
           
         };
         
