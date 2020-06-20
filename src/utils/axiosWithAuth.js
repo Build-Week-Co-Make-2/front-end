@@ -6,9 +6,10 @@ const axiosWithAuth = () => {
 	return axios.create({
 		// config object
 		headers: {
-			authorization: token,
+			'Content-Type': 'application/json',
+			Authorization: token,
 		},
-		baseURL: 'https://co-make-9cf46.web.app/api/login',
+		baseURL: 'https://co-make-9cf46.web.app/api',
 	});
 };
 

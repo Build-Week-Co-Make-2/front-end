@@ -1,15 +1,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Login from '../components/Login';
 import ProtectedRoute from './ProtectedRoute';
+import Login from '../components/Login';
 import Signup from '../components/SignupForm';
+import Newsfeed from '../components/Newsfeed';
 
 const Routes = () => {
 	return (
 		<div>
-			{/* Protected Routes go here */}
-			<Route exact path="/" component={Signup} />
-			<Route path="/login" component={Login} />
+			<ProtectedRoute path="/feed" component={Newsfeed } />
+			<Route exact path="/" component={Signup }/>
+			<Route path="/login" component={Login}  />
 		</div>
 	);
 };
