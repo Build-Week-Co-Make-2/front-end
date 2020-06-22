@@ -5,7 +5,6 @@ import Routes from './utils/Routes';
 import Footer from './components/Footer';
 
 function App() {
-	console.log('Time for Smokey');
 
 	return (
 		<section className="App">
