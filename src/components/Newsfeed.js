@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Card, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Button } from 'reactstrap';
 import axiosWithAuth from "../utils/axiosWithAuth";
 import {Link} from 'react-router-dom';
 
@@ -22,7 +22,7 @@ return (
     <>
        <h1>You have Arrived, enjoy your potHOLE</h1>
        <IssuesList issues={feed}/> 
-       <Link to="/newPost"><Button>Post!</Button></Link>
+       <Link to="/newPost"><Button>Post an issue!</Button></Link>
     </>
 )
 

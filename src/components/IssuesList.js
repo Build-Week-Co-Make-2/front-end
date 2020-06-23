@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Card, CardTitle, CardText, CardFooter} from 'reactstrap';
+import { Container, Row, Col, Card, CardTitle, CardText, CardFooter} from 'reactstrap';
 
 const IssuesList = props => {
     console.log (props)
@@ -14,17 +13,23 @@ const IssuesList = props => {
 }
 
 function IssueDetails({ issue }) {
-    const { title, description, owner } = issue;
+    const { title, description, upvotes, owner } = issue;
     return (
         <>
-         <Card>
+        <Container>
+            
+         <Card style={{width: '30rem'}}>
            
-            <CardTitle>{title}
+            <CardTitle>Title: {title}
             </CardTitle>
             {/* <CardImg src=> */}
-            <CardText>{description}</CardText>
-            <CardFooter>{owner.name}</CardFooter>
+            <CardText>Description: {description}</CardText>
+        <CardText>Name of poster: {owner.name}</CardText>
+            <CardFooter>Upvotes: {upvotes}</CardFooter>
          </Card>
+            
+       
+        </Container>
          </>
     )
 }

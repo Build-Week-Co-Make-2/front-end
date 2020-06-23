@@ -37,6 +37,7 @@ const handleChanges = (event) => {
 
 return (
     <>
+	<div className="sform">
     <Form
 					onSubmit={(event) => {
 						event.preventDefault();
@@ -73,6 +74,7 @@ return (
 						Post!
 					</Button>
 				</Form>
+				</div>
                 </>
                 )
 }
