@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { Card, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axiosWithAuth from "../utils/axiosWithAuth";
+import {Link} from 'react-router-dom';
 
 import IssuesList from './IssuesList';
-import NewPost from './NewPost';
+
 
 
 const Newsfeed = props => {
@@ -21,8 +22,7 @@ return (
     <>
        <h1>You have Arrived, enjoy your potHOLE</h1>
        <IssuesList issues={feed}/> 
-   
-       <Button></Button>
+       <Link to="/newPost"><Button>Post!</Button></Link>
     </>
 )
 
