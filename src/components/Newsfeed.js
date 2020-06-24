@@ -22,7 +22,8 @@ return (
     <>
        <h1>You have Arrived, enjoy your potHOLE</h1>
        <IssuesList issues={feed}/> 
-       <Link to="/newPost"><Button>Post an issue!</Button></Link>
+       <Link to="/newPost"><Button className="btn" >Post an issue!</Button></Link>
+    
     </>
 )
 

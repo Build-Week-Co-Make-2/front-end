@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import axiosWithAuth from '../utils/axiosWithAuth';
+import {Link} from 'react-router-dom';
 import * as yup from 'yup';
 
 const NewPost = props => {
@@ -73,6 +74,7 @@ return (
                     <Button className="btn" disabled={buttonDisabled}>
 						Post!
 					</Button>
+					<Link to="/feed"><Button className="btn">Cancel</Button></Link>
 				</Form>
 				</div>
                 </>

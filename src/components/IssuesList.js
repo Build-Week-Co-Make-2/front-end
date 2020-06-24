@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, CardTitle, CardText, CardFooter} from 'react
 const IssuesList = props => {
     console.log (props)
     return (
-        <div className= "issue-list">
+        <div className="centered">
             {props.issues.map(issue => (
                 <IssueDetails key={issue.id} issue={issue} />
             ))}
@@ -16,20 +16,19 @@ function IssueDetails({ issue }) {
     const { title, description, upvotes, owner } = issue;
     return (
         <>
-        <Container>
+      
             
-         <Card style={{width: '30rem'}}>
+         <Card style={{width: '30rem', margin: '5px'}}>
            
-            <CardTitle>Title: {title}
+            <CardTitle><strong>Title:</strong> {title}
             </CardTitle>
             {/* <CardImg src=> */}
-            <CardText>Description: {description}</CardText>
-        <CardText>Name of poster: {owner.name}</CardText>
-            <CardFooter>Upvotes: {upvotes}</CardFooter>
+            <CardText><strong>Description:</strong> {description}</CardText>
+        <CardText><strong>Name of poster:</strong> {owner.name}</CardText>
+            <CardFooter><strong>Upvotes:</strong> {upvotes}</CardFooter>
          </Card>
             
-       
-        </Container>
+
          </>
     )
 }
