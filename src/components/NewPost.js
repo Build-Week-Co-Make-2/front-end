@@ -74,7 +74,7 @@ return (
                     <Button className="btn" disabled={buttonDisabled}>
 						Post!
 					</Button>
-					<Link to="/feed"><Button className="btn">Cancel</Button></Link>
+					<Link to="/feed02"><Button className="btn">Cancel</Button></Link>
 				</Form>
 				</div>
                 </>
