@@ -11,7 +11,7 @@ export const login = (creds, props) => (dispatch) => {
 		.post('/auth/login', creds)
 		.then((res) => {
 			// console.log(res.data);
-			localStorage.setItem('token', res.data.token);
+			localStorage.setItem('token', res.data);
 			history.push(`/dash/${res.data.user_id}`);
 		})
 

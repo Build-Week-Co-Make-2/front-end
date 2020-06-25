@@ -9,7 +9,7 @@ const axiosWithAuth = () => {
 			'Content-Type': 'application/json',
 			Authorization: token,
 		},
-		baseURL: 'API GOES OVER HERE!',
+		baseURL: 'https://co-make-9cf46.web.app',
 	});
 };
 
