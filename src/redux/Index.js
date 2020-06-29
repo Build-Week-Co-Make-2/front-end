@@ -1,9 +1,10 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { SET_ERR } from './Actions';
+import { SET_ERR, GET_ISSUES, ADD_ISSUES, EDIT_ISSUES } from './Actions';
 
 const initialState = {
 	issues: [],
+	users: [],
 	error: '',
 };
 
@@ -13,6 +14,23 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				error: action.payload,
+			};
+			case GET_ISSUES:
+				return {
+					...state,
+					issues: action.payload,
+				};
+			case ADD_ISSUES:
+				return {
+					...state,
+					
+					issues: [...state.issues, action.payload],
+				};
+				case EDIT_ISSUES:
+			const newIssuesArray = state.issues.filter(issue => issue.id !== action.payload.id);
+			return {
+				...state,
+				issues: [...newIssuesArray, action.payload],
 			};
 
 		default:
