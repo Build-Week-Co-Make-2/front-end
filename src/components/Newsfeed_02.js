@@ -3,16 +3,16 @@ import { Button } from 'reactstrap';
 import axiosWithAuth from "../utils/axiosWithAuth";
 import {Link} from 'react-router-dom';
 
-import IssuesList from './IssuesList';
+import IssuesList02 from './IssuesList_02';
 
 
 
-const Newsfeed = props => {
+const Newsfeed02 = props => {
     const [feed, setFeed] = useState([]);
 
    useEffect(() => {
      axiosWithAuth()
-    .get('/posts/')
+    .get('/api/issues/')
     .then(res => setFeed(res.data))
    .catch(err => console.log(err))
   },[]);
@@ -20,12 +20,12 @@ const Newsfeed = props => {
 
 return (
     <>
-       <h1>You have Arrived, enjoy your potHOLE</h1>
-       <IssuesList issues={feed}/> 
+       
+       <IssuesList02 issues={feed}/> 
        <Link to="/newPost"><Button className="btn" >Post an issue!</Button></Link>
     
     </>
 )
 
 }
-export default Newsfeed;
+export default Newsfeed02;

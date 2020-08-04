@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Card, CardTitle, CardText, CardFooter} from 'reactstrap';
+import { CardImg, Card, CardTitle, CardText, CardFooter} from 'reactstrap';
 
-const IssuesList = props => {
+const IssuesList02 = props => {
     console.log (props)
     return (
         <div className="centered">
@@ -13,7 +13,7 @@ const IssuesList = props => {
 }
 
 function IssueDetails({ issue }) {
-    const { title, description, upvotes, owner } = issue;
+    const { title, desc, votes, state, owner } = issue;
     return (
         <>
       
@@ -23,9 +23,10 @@ function IssueDetails({ issue }) {
             <CardTitle><strong>Title:</strong> {title}
             </CardTitle>
             {/* <CardImg src=> */}
-            <CardText><strong>Description:</strong> {description}</CardText>
+            <CardText><strong>Description:</strong> {desc}</CardText>
         <CardText><strong>Name of poster:</strong> {owner.name}</CardText>
-            <CardFooter><strong>Upvotes:</strong> {upvotes}</CardFooter>
+        <CardText><strong>State:</strong> {state}</CardText>
+            <CardFooter><strong>Upvotes:</strong> {votes}</CardFooter>
          </Card>
             
 
@@ -33,4 +34,4 @@ function IssueDetails({ issue }) {
     )
 }
 
-export default IssuesList;
+export default IssuesList02;

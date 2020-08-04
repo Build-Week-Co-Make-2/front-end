@@ -4,6 +4,7 @@ import ProtectedRoute from './ProtectedRoute';
 import Login from '../components/Login';
 import Signup from '../components/SignupForm';
 import Newsfeed from '../components/Newsfeed';
+import NewPost from '../components/NewPost';
 
 const Routes = () => {
 	return (
@@ -11,6 +12,7 @@ const Routes = () => {
 			<ProtectedRoute path="/feed" component={Newsfeed } />
 			<Route exact path="/" component={Signup }/>
 			<Route path="/login" component={Login}  />
+			<Route path="/newPost" component={NewPost} />
 		</div>
 	);
 };
